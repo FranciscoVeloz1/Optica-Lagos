@@ -1,0 +1,92 @@
+{{>sidebar}}
+
+<div id="content" class="">
+    {{>navigation}}
+    {{>message}}
+
+    <div class="menu_info card mt-4">
+        <div class="card-body card-buscador">
+            <div class="col-auto">
+                <div class="row">
+                    <div class="col-md-6 input-group ">
+                        <input type="text" class="form-control" id="tableSearch" placeholder="Buscar">
+                        <div class="input-group-prepend">
+                            <button class="btn btn-search">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6" style="text-align: right;">
+                        <button type="button" class="btn btn-oxford btn-sm">
+                            <i class="fas fa-file-excel"></i>
+                        </button>
+
+                        <button type="button" class="btn btn-oxford btn-sm "
+                            style=" margin-bottom: 8px ; margin-top: 8px;">
+                            <i class="fas fa-file-pdf"></i>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-body card-h5 bg-gray">
+            <div class="container">
+                <h5>Lista de administradores</h5>
+            </div>
+        </div>
+
+        <div class="card-body col-xl-10">
+            <div class="table-responsive">
+                <table class="table table-hover" style="font-size: 14px;">
+                    <thead>
+                        <tr>
+                            <th class="text-left">ID</th>
+                            <th>Usuario</th>
+                            <th>Nombre</th>
+                            <th>Email</th>
+                            <th>Rol</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each admin}}
+                        <tr>
+                            <td class="text-left">{{id_user}}</td>
+                            <td>{{user}}</td>
+                            <td>{{fullname}}</td>
+                            <td>{{email}}</td>
+                            <td>{{role}}</td>
+                            <td>
+                                <!--BOTÓN ACCIONES-->
+                                <div class="btn-group dropleft">
+                                    <div>
+                                        <a href="/admin/admins/edit/{{id_user}}"
+                                            class="btn btn-size-right btn-info ml-1">
+                                            Editar
+                                        </a>
+                                    </div>
+
+                                    <div>
+                                        <a href="/admin/admins/delete/{{id_user}}"
+                                            onclick="return confirm('¿Quieres eliminar a {{user}}?')"
+                                            class="btn btn-size-right btn-danger ml-1" id="btn-delete">
+                                            Eliminar
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--END BOTÓN ACCIONES-->
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!--END TABLA-->
+
+    <script src="/js/index.js"></script>
+</div>
