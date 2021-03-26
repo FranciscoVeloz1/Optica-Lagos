@@ -8,5 +8,7 @@ router.get('/admin/pacientes/add', isLoggedIn, isAdminIn, controller.RenderAdd)
 router.post('/admin/pacientes/add', isLoggedIn, isAdminIn, controller.Insert)
 router.get('/admin/pacientes/edit/:id', isLoggedIn, isAdminIn, controller.RenderEdit)
 router.post('/admin/pacientes/edit/:id', isLoggedIn, isAdminIn, controller.Edit)
+router.get('/admin/pacientes/delete/:id', isLoggedIn, isAdminIn, controller.Delete)
+
 
 module.exports = router

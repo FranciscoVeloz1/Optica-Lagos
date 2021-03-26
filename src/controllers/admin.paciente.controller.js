@@ -77,6 +77,23 @@ class PacienteController {
             res.redirect('/admin/pacientes/edit/' + id)
         }
     }
+
+    //Eliminar pacientes
+    async Delete(req, res) {
+        const { id } = req.params
+        const paciente = await pool.query('select * from pacientes where id_paciente = ?', [id])
+
+        try {
+            if (id == paciente[0].id_paciente) {
+                await pool.query('delete from pacientes where id_paciente = ?', [id])
+                req.flash('success', 'Paciente eliminado con exito')
+                res.redirect('/admin/pacientes')
+            }
+        } catch (error) {
+            req.flash('message', 'No se pudo eliminar el paciente')
+            res.redirect('/admin/pacientes')
+        }
+    }
 }
 
 module.exports = new PacienteController();
