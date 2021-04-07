@@ -62,6 +62,7 @@ app.use(require('./routes/admin.admin.route'));
 app.use(require('./routes/admin.super.route'));
 app.use(require('./routes/admin.user.route'));
 app.use(require('./routes/admin.paciente.route'));
+app.use(require('./routes/admin.antecedente.route'));
 
 //Starting
 app.listen(app.get('port'), () => {

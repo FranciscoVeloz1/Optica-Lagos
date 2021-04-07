@@ -60,19 +60,19 @@ drop view v_antePaciente;
 create view v_antePaciente as 
 select a.id_antecedente, p.id_paciente, p.nombre, a.diabetes, a.hipertension, a.otro, a.tiempo, a.lentes, a.derecho, a.izquierdo, a.adiacion
 from antecedentes a, pacientes p
-where a.fkpaciente = p.id_paciente;
+where a.fk_paciente = p.id_paciente;
 
 drop view v_ordenpaciente;
 create view v_ordenpaciente as 
 select o.id_orden, o.fecha, p.id_paciente, p.nombre, o.derecho, o.izquierdo, o.addp, o.material, o.entrega, o.precio, o.anticipo, o.precio-o.anticipo as resta
 from orden o, pacientes p
-where o.fkpaciente = p.id_paciente;
+where o.fk_paciente = p.id_paciente;
 
 drop view v_ventas;
 create view v_ventas as
 select o.id_orden, p.id_paciente, p.nombre, o.fecha, o.precio, o.anticipo, o.precio-o.anticipo as resta
 from orden o, pacientes p
-where o.fkpaciente = p.id_paciente;
+where o.fk_paciente = p.id_paciente;
 
 drop view v_sumaprecio;
 create view v_sumaprecio as

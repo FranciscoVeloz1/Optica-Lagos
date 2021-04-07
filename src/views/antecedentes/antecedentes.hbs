@@ -26,11 +26,6 @@
                             style=" margin-bottom: 8px ; margin-top: 8px;">
                             <i class="fas fa-file-pdf"></i>
                         </button>
-
-                        <a href="/admin/pacientes/add" class="btn btn-oxford btn-sm" style="margin-left: 10px;">
-                            <i class="fas fa-plus-square"></i> Agregar paciente
-                        </a>
-
                     </div>
                 </div>
             </div>
@@ -38,7 +33,7 @@
 
         <div class="card-body card-h5 bg-gray">
             <div class="container">
-                <h5>Lista de pacientes</h5>
+                <h5>Antecedentes</h5>
             </div>
         </div>
 
@@ -48,42 +43,43 @@
                     <thead>
                         <tr>
                             <th class="text-left">ID</th>
-                            <th>Nombre</th>
-                            <th>Edad</th>
-                            <th>Direccion</th>
-                            <th>Colonia</th>
-                            <th>Telefono</th>
-                            <th>Fecha</th>
+                            <th>Paciente</th>
+                            <th>Diabetes</th>
+                            <th>Hipertension</th>
+                            <th>Otro</th>
+                            <th>Tiempo</th>
+                            <th>Lentes</th>
+                            <th>Derecho</th>
+                            <th>Izquierdo</th>
+                            <th>Adiacion</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {{#each paciente}}
                         <tr>
-                            <td class="text-left">{{id_paciente}}</td>
-                            <td>
-                                <a href="/admin/pacientes/antecedentes/{{id_paciente}}" class="link-paciente">
-                                    {{nombre}} {{apellidop}} {{apellidom}}
-                                </a>
-                            </td>
-                            <td>{{edad}}</td>
-                            <td>{{direccion}}</td>
-                            <td>{{colonia}}</td>
-                            <td>{{telefono}}</td>
-                            <td>{{fecha}}</td>
+                            <td class="text-left">{{antecedente.id_antecedente}}</td>
+                            <td>{{antecedente.nombre}}</td>
+                            <td>{{antecedente.diabetes}}</td>
+                            <td>{{antecedente.hipertension}}</td>
+                            <td>{{antecedente.otro}}</td>
+                            <td>{{antecedente.tiempo}}</td>
+                            <td>{{antecedente.lentes}}</td>
+                            <td>{{antecedente.derecho}}</td>
+                            <td>{{antecedente.izquierdo}}</td>
+                            <td>{{antecedente.adiacion}}</td>
                             <td>
                                 <!--BOTÓN ACCIONES-->
                                 <div class="btn-group dropleft">
                                     <div>
-                                        <a href="/admin/pacientes/edit/{{id_paciente}}"
+                                        <a href="/admin/pacientes/antecedentes/edit/{{antecedente.id_antecedente}}"
                                             class="btn btn-size-right btn-info ml-1">
                                             Editar
                                         </a>
                                     </div>
 
                                     <div>
-                                        <a href="/admin/pacientes/delete/{{id_paciente}}"
-                                            onclick="return confirm('¿Quieres eliminar a {{nombre}}?')"
+                                        <a href="/admin/pacientes/antecedentes/delete/{{antecedente.id_antecedente}}"
+                                            onclick="return confirm('¿Quieres eliminar los antecedentes?')"
                                             class="btn btn-size-right btn-danger ml-1" id="btn-delete">
                                             Eliminar
                                         </a>
@@ -92,7 +88,6 @@
                                 <!--END BOTÓN ACCIONES-->
                             </td>
                         </tr>
-                        {{/each}}
                     </tbody>
                 </table>
             </div>

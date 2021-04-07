@@ -1,0 +1,79 @@
+{{>sidebar}}
+
+<div id="content">
+    {{>navigation}}
+    {{>message}}
+
+    <div class="container menu_info mt-5">
+        <div class="row">
+            <div class="col-md-8 col-xl-4 mx-auto">
+                <div class="card text-center">
+                    <div class="card-header">
+                        <h3>Editar antecedentes</h3>
+                    </div>
+                    <div class="card-body">
+                        <form action="/admin/pacientes/antecedentes/edit/{{antecedente.id_antecedente}}" method="POST">
+
+                            <div class="form-group text-left">
+                                <h5 style="color: #767f86;">Diabetes</h5>
+                                <select name="diabetes" class="form-control">
+                                    <option value="No">No</option>
+                                    <option value="Si">Si</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group text-left">
+                                <h5 style="color: #767f86;">Hipertension</h5>
+                                <select name="hipertension" class="form-control">
+                                    <option value="No">No</option>
+                                    <option value="Si">Si</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" name="otro" value="{{antecedente.otro}}" placeholder="Otro"
+                                    class="form-control" />
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" name="tiempo" value="{{antecedente.tiempo}}" placeholder="Tiempo"
+                                    class="form-control" />
+                            </div>
+
+                            <div class="form-group text-left">
+                                <h5 style="color: #767f86;">Lentes</h5>
+                                <select name="lentes" class="form-control">
+                                    <option value="No">No</option>
+                                    <option value="Si">Si</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" name="derecho" value="{{antecedente.derecho}}" placeholder="Derecho"
+                                    class="form-control" />
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" name="izquierdo" value="{{antecedente.izquierdo}}"
+                                    placeholder="Izquierdo" class="form-control" />
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" name="adiacion" value="{{antecedente.adiacion}}"
+                                    placeholder="Adiacion" class="form-control" />
+                            </div>
+
+                            <div class="form-group">
+                                <button class="btn btn-oxford btn-block">
+                                    Editar
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/js/index.js"></script>

@@ -93,6 +93,15 @@ a[data-toggle="collapse"] {
   transition: all 0.3s;
 }
 
+.link-paciente {
+  color: black;
+}
+
+.link-paciente:hover {
+  color: blue;
+  text-decoration: none;
+}
+
 .flash_container {
   margin-top: 20px;
 }
