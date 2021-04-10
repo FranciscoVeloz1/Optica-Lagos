@@ -94,6 +94,16 @@ class PacienteController {
             res.redirect('/admin/pacientes')
         }
     }
+
+    ///////////////////////////////////// API /////////////////////////////////////
+    async ListAPI(req, res) {
+        try {
+            const paciente = await pool.query('select * from pacientes')
+            res.json(paciente)
+        } catch (error) {
+            res.json(error)
+        }
+    }
 }
 
 module.exports = new PacienteController();

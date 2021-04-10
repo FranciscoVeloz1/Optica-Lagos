@@ -49,6 +49,16 @@ class AdminController {
         req.flash('success', 'Administrador eliminado con éxito');
         res.redirect('/admin/admins');
     }
+
+    ///////////////////////////////////// API /////////////////////////////////////
+    async ListAPI(req, res) {
+        try {
+            const admin = await pool.query('select * from user where role = "admin"')
+            res.json(admin)
+        } catch (error) {
+            res.json(error)
+        }
+    }
 }
 
 module.exports = new AdminController();
