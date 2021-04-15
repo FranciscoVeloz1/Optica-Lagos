@@ -54,6 +54,16 @@ class UserController {
             res.redirect('/admin/users');
         }
     }
+
+    ///////////////////////////////////// API /////////////////////////////////////
+    async ListAPI(req, res) {
+        try {
+            const usuario = await pool.query('select * from user where role = "user"')
+            res.json(usuario)
+        } catch (error) {
+            res.json(error)
+        }
+    }
 }
 
 module.exports = new UserController();

@@ -83,6 +83,17 @@ class AntecedenteController {
             res.redirect('/admin/pacientes')
         }
     }
+
+    ///////////////////////////////////// API /////////////////////////////////////
+    async ListAPI(req, res) {
+        try {
+            const { id } = req.params
+            const antecedente = await pool.query('select * from v_antePaciente where id_antecedente = ?', [id])
+            res.json(antecedente)
+        } catch (error) {
+            res.json(error)
+        }
+    }
 }
 
 module.exports = new AntecedenteController()

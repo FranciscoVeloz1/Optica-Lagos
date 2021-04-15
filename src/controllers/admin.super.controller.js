@@ -49,6 +49,16 @@ class SuperController {
         req.flash('success', 'Supervisor eliminado con éxito');
         res.redirect('/admin/supervisor');
     }
+
+    ///////////////////////////////////// API /////////////////////////////////////
+    async ListAPI(req, res) {
+        try {
+            const supervisor = await pool.query('select * from user where role = "supervisor"')
+            res.json(supervisor)
+        } catch (error) {
+            res.json(error)
+        }
+    }
 }
 
 module.exports = new SuperController();

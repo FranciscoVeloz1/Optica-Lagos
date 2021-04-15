@@ -9,4 +9,6 @@ router.get('/admin/pacientes/antecedentes/edit/:id', isLoggedIn, isAdminIn, cont
 router.post('/admin/pacientes/antecedentes/edit/:id', isLoggedIn, isAdminIn, controller.Editar)
 router.get('/admin/pacientes/antecedentes/delete/:id', isLoggedIn, isAdminIn, controller.Eliminar)
 
+router.get('/api/admin/pacientes/antecedentes/:id', isLoggedIn, isAdminIn, controller.ListAPI)
+
 module.exports = router

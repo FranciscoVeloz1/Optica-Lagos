@@ -8,17 +8,17 @@
         <div class="card-body card-buscador">
             <div class="col-auto">
                 <div class="row">
-                    <div class="col-md-6 input-group ">
-                        <input type="text" class="form-control" id="tableSearch" placeholder="Buscar">
+                    <div class="col-md-6 input-group">
+                        <input type="text" class="form-control" id="tableSearch" placeholder="Buscar" disabled>
                         <div class="input-group-prepend">
-                            <button class="btn btn-search">
+                            <button class="btn btn-search" disabled>
                                 <i class="fas fa-search"></i>
                             </button>
                         </div>
                     </div>
 
                     <div class="col-md-6" style="text-align: right;">
-                        <button type="button" class="btn btn-oxford btn-sm">
+                        <button type="button" id="ante_excel" class="btn btn-oxford btn-sm">
                             <i class="fas fa-file-excel"></i>
                         </button>
 
@@ -51,13 +51,13 @@
                             <th>Lentes</th>
                             <th>Derecho</th>
                             <th>Izquierdo</th>
-                            <th>Adiacion</th>
+                            <th>Adicion</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="text-left">{{antecedente.id_antecedente}}</td>
+                            <td class="text-left" id="identificador">{{antecedente.id_antecedente}}</td>
                             <td>{{antecedente.nombre}}</td>
                             <td>{{antecedente.diabetes}}</td>
                             <td>{{antecedente.hipertension}}</td>
@@ -96,4 +96,5 @@
     <!--END TABLA-->
 
     <script src="/js/index.js"></script>
+    <script type="module" src="/js/excel.js"></script>
 </div>

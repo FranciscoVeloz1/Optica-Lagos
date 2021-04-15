@@ -8,4 +8,6 @@ router.get('/admin/users/edit/:id', isLoggedIn, isAdminIn, controller.RenderEdit
 router.post('/admin/users/edit/:id', isLoggedIn, isAdminIn, controller.EditUser)
 router.get('/admin/users/delete/:id', isLoggedIn, isAdminIn, controller.DeleteUser)
 
+router.get('/api/admin/users', isLoggedIn, isAdminIn, controller.ListAPI)
+
 module.exports = router
