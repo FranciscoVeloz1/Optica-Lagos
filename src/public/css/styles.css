@@ -7,7 +7,8 @@
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
-  background-color: #e6e7e9;
+  /* background-color: #e6e7e9; */
+  background-color: white;
 }
 
 .sidebar {
@@ -109,7 +110,7 @@ a[data-toggle="collapse"] {
 /* NAVBAR */
 
 .bg-gray {
-  background-color:  #efeff1;
+  background-color: #efeff1;
 }
 
 .btn-oxford {
@@ -127,6 +128,42 @@ a[data-toggle="collapse"] {
 /* ---------------------------------------------------
     CONTENT STYLE
 ----------------------------------------------------- */
+
+/* PROFILE */
+.user_info {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 0px;
+}
+
+.card_user_info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  width: 100%;
+  height: 50px;
+}
+
+.card_user_info p {
+  margin: 0px;
+}
+
+.card_user_info i {
+  color: #1da1f2;
+  margin: 0px;
+}
+
+.card_user_info i:hover {
+  cursor: pointer;
+}
+
+.p_category {
+  font-size: 18px;
+}
+/* /PROFILE */
 
 #content {
   width: calc(100% - 250px);
@@ -221,6 +258,10 @@ a[data-toggle="collapse"] {
     z-index: 2;
   }
 
+  .card_user_info p {
+    font-size: 14px;
+  }
+  
   .admin_crud__container {
     background-color: transparent;
     border: none;

@@ -55,6 +55,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //Routes
 app.use(require('./routes/index.route'));
 app.use(require('./routes/auth.route'));
+app.use(require('./routes/profile.route'));
 
 //Admin routes
 app.use(require('./routes/admin.dash.route'));

@@ -1,0 +1,33 @@
+{{>navbar}}
+{{>message}}
+
+<div class="container">
+
+    <h1 class="mt-4 text-center">Mis datos</h1>
+
+    <section class="user_info">
+        <h4 class="mb-3">Datos personales</h4>
+        <div class="card_user">
+            <div class="card card_user_info">
+                <p class="p_category">Nombre</p>
+                <p>{{user.fullname}}</p>
+                <a href="/profile/edit/name"><i class="fas fa-angle-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="user_info">
+        <h4 class="mb-3">Datos de cuenta</h4>
+        <div class="card card_user_info">
+            <p class="p_category">Usuario</p>
+            <p>{{user.user}}</p>
+            <a href="/profile/edit/user"><i class="fas fa-angle-right"></i></a>
+        </div>
+        <div class="card card_user_info mt-3">
+            <p class="p_category">Email</p>
+            <p>{{user.email}}</p>
+            <a href="/profile/edit/email"><i class="fas fa-angle-right"></i></a>
+        </div>
+    </section>
+
+</div>
