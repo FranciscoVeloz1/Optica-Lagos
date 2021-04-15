@@ -125,6 +125,10 @@ a[data-toggle="collapse"] {
 .btn_admin {
   display: none;
 }
+
+#navbarDropdown {
+  background-color: #343a40;
+}
 /* ---------------------------------------------------
     CONTENT STYLE
 ----------------------------------------------------- */

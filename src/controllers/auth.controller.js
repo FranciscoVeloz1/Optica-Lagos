@@ -10,7 +10,7 @@ class AuthController {
 
     Login(req, res, next) {
         passport.authenticate('local.signin', {
-            successRedirect: '/',
+            successRedirect: '/profile',
             failureRedirect: '/login',
             failureFlash: true
         })(req, res, next)

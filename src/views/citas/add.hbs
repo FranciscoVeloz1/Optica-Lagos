@@ -1,0 +1,31 @@
+{{>navbar}}
+{{>message}}
+
+<div class="text-center mt-4">
+    <h1>Agendar cita</h1>
+</div>
+
+<div class="container mt-5 mb-5">
+    <div class="row">
+        <div class="col-md-6 col-xl-4 mx-auto">
+            <form action="/user/citas/add" method="post">
+                <div class="form-group">
+                    <input type="date" name="fecha" id="fecha" placeholder="Fecha" class="form-control" />
+                </div>
+
+                <div class="form-group">
+                    <select name="hora" id="hora" placeholder="Hora" class="form-control">
+                        <option id="opcion"></option>
+                    </select>
+                </div>
+
+                <div class="form-group mt-5">
+                    <button class="btn btn-success btn-block">
+                        Agendar
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

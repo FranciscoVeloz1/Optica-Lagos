@@ -1,0 +1,55 @@
+{{>navbar}}
+{{>message}}
+
+<section class="container mt-5 mb-5">
+    <div class="row">
+
+        {{!-- {{#each cars}}
+        <div class="col-xl-4 col-md-6 col-sm-12">
+            <div class="card card_container text-center">
+                <div class="card-header">
+                    {{name}}
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title mb-4">
+                        {{model}}
+                    </h5>
+                    <p class="card-text mb-4">
+                        {{version}}
+                    </p>
+                    <a class="btn btn-success" href="/user/maps/{{id_auto}}">
+                        Mapa
+                    </a>
+
+                    <a href="/user/cars/delete/{{id_auto}}" class="btn btn-danger"
+                        onclick="return confirm('¿Quieres eliminar el vehiculo {{name}}?')">
+                        Eliminar
+                    </a>
+
+                    <a class="btn btn-info" href="/user/cars/edit/{{id_auto}}">
+                        Editar
+                    </a>
+                </div>
+            </div>
+        </div> --}}
+
+        {{!-- {{else}} --}}
+        <div class="col-xl-4 col-md-6 col-sm-12">
+            <div class="card card_container text-center">
+                <div class="card-header">
+                    No has agendado ninguna cita
+                </div>
+                <div class="card-body mt-4">
+                    <h5 class="card-title">
+                        ¡Agenda una!
+                    </h5>
+                    <a class="btn btn-success mt-4" href="/user/citas/add">
+                        Agendar
+                    </a>
+                </div>
+            </div>
+        </div>
+        {{!-- {{/each}} --}}
+
+    </div>
+</section>
