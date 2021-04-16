@@ -8,7 +8,7 @@
         <div class="card-body card-buscador">
             <div class="col-auto">
                 <div class="row">
-                    <div class="col-md-6 input-group ">
+                    <div class="col-md-6 input-group">
                         <input type="text" class="form-control" id="tableSearch" placeholder="Buscar">
                         <div class="input-group-prepend">
                             <button class="btn btn-search">
@@ -27,6 +27,10 @@
                             <i class="fas fa-file-pdf"></i>
                         </button>
 
+                        <a href="/admin/orden/add" class="btn btn-oxford btn-sm" style="margin-left: 10px;">
+                            <i class="fas fa-plus-square"></i> Agregar orden
+                        </a>
+
                     </div>
                 </div>
             </div>
@@ -38,7 +42,7 @@
             </div>
         </div>
 
-        <div class="card-body col-xl-10">
+        <div class="card-body col-xl-12">
             <div class="table-responsive">
                 <table class="table table-hover" style="font-size: 14px;">
                     <thead>
@@ -75,15 +79,15 @@
                                 <!--BOTÓN ACCIONES-->
                                 <div class="btn-group dropleft">
                                     <div>
-                                        <a href="/admin/admins/edit/{{id_user}}"
+                                        <a href="/admin/orden/edit/{{id_orden}}"
                                             class="btn btn-size-right btn-info ml-1">
                                             Editar
                                         </a>
                                     </div>
 
                                     <div>
-                                        <a href="/admin/admins/delete/{{id_user}}"
-                                            onclick="return confirm('¿Quieres eliminar a {{user}}?')"
+                                        <a href="/admin/orden/delete/{{id_orden}}"
+                                            onclick="return confirm('¿Quieres eliminar a {{fk_paciente}}?')"
                                             class="btn btn-size-right btn-danger ml-1" id="btn-delete">
                                             Eliminar
                                         </a>
