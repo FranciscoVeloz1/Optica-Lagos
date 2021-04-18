@@ -55,6 +55,14 @@ create table orden
     foreign key(fk_paciente) references pacientes(id_paciente)
 );
 
+create table cita (
+    id_cita int primary key auto_increment,
+    fk_user int,
+    fecha varchar(100),
+    hora varchar(50),
+    foreign key(fk_user) references user(id_user)
+);
+
 --Vistas
 drop view v_antePaciente;
 create view v_antePaciente as 

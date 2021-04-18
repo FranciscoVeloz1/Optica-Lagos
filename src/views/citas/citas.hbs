@@ -1,43 +1,35 @@
 {{>navbar}}
 {{>message}}
 
+<div class="text-center mt-4">
+    <h1>Citas</h1>
+</div>
 <section class="container mt-5 mb-5">
     <div class="row">
-
-        {{!-- {{#each cars}}
-        <div class="col-xl-4 col-md-6 col-sm-12">
+        {{#each cita}}
+        <div class="col-xl-4 col-md-6 col-sm-12 mx-auto mb-5">
             <div class="card card_container text-center">
                 <div class="card-header">
-                    {{name}}
+                    <h3>{{fecha}} -- {{hora}}</h3>
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title mb-4">
-                        {{model}}
-                    </h5>
-                    <p class="card-text mb-4">
-                        {{version}}
-                    </p>
-                    <a class="btn btn-success" href="/user/maps/{{id_auto}}">
-                        Mapa
+                    <a class="btn btn-info" href="/user/citas/edit/{{id_cita}}">
+                        Reagendar
                     </a>
 
-                    <a href="/user/cars/delete/{{id_auto}}" class="btn btn-danger"
-                        onclick="return confirm('¿Quieres eliminar el vehiculo {{name}}?')">
-                        Eliminar
-                    </a>
-
-                    <a class="btn btn-info" href="/user/cars/edit/{{id_auto}}">
-                        Editar
+                    <a href="/user/citas/delete/{{id_cita}}" class="btn btn-danger"
+                        onclick="return confirm('¿Quieres cancelar tu cita?')">
+                        Cancelar
                     </a>
                 </div>
             </div>
-        </div> --}}
+        </div>
 
-        {{!-- {{else}} --}}
-        <div class="col-xl-4 col-md-6 col-sm-12">
+        {{else}}
+        <div class="col-xl-4 col-md-6 col-sm-12 mx-auto">
             <div class="card card_container text-center">
                 <div class="card-header">
-                    No has agendado ninguna cita
+                    <h3>No has agendado ninguna cita</h3>
                 </div>
                 <div class="card-body mt-4">
                     <h5 class="card-title">
@@ -49,7 +41,7 @@
                 </div>
             </div>
         </div>
-        {{!-- {{/each}} --}}
+        {{/each}}
 
     </div>
 </section>
