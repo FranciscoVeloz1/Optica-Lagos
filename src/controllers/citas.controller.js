@@ -1,5 +1,5 @@
 const pool = require('../lib/database')
-const currentDay = require('../lib/getcurrentday')
+const { getCurrentDay, getNextDay } = require('../lib/getcurrentday')
 
 class CitasController {
     async Listar(req, res) {
@@ -9,15 +9,18 @@ class CitasController {
 
     async ListarAdd(req, res) {
         const cita = await pool.query('select * from cita where fk_user = ?', [req.user.id_user])
+        const citas = await pool.query('select * from cita')
+        console.log(citas)
+        const day = getNextDay()
         if (cita.length > 0) {
-            req.flash('message', 'Ya no puedes agendar mas citas');
+            req.flash('message', 'No puedes agendar mas de una cita');
             res.redirect('/user/citas')
         } else {
-            res.render('citas/add')
+            res.render('citas/add' , { day })
         }
     }
 
-    async AgendarCita(req, res, next) {
+    async AgendarCita(req, res) {
         const { fecha, hora } = req.body
         const cita = await pool.query('select * from cita')
 
@@ -31,11 +34,11 @@ class CitasController {
             if (c.fecha == fecha && c.hora == hora) {
                 req.flash('message', 'Fecha y horario ocupado');
                 res.redirect('/user/citas/add')
-                next()
+                return
             }
         }
 
-        if (fecha !== currentDay()) {
+        if (fecha !== getCurrentDay()) {
             // await pool.query('insert into cita set ?', [newCita])
             console.log(newCita)
             req.flash('success', 'Cita agendada con exito');
