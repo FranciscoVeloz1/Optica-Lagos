@@ -2,23 +2,26 @@ const pool = require('../lib/database')
 
 class OrdenController {
     async List(req, res) {
-        const orden = await pool.query('select * from orden')
+        const orden = await pool.query('select * from v_ordenpaciente')
         res.render('orden/orden', {orden})
     }
 
     //Insertar ordenes
     RenderAdd(req, res) {
-        res.render('orden/add')
+        const { id } = req.params
+        console.log(id)
+        res.render('orden/add',{id})
     }
 
     async Insert(req, res) {
         try {
-            const { fk_paciente, derecho, izquierdo, addp, material, entrega, precio, anticipo, saldo } = req.body
+            const { id } = req.params
+            const {derecho, izquierdo, addp, material, entrega, precio, anticipo } = req.body
             const fecha = new Date()
 
             const newOrden = {
                 fecha,
-                fk_paciente,
+                fk_paciente: id,
                 derecho,
                 izquierdo,
                 addp,
@@ -26,7 +29,6 @@ class OrdenController {
                 entrega,
                 precio,
                 anticipo,
-                saldo
             }
 
             await pool.query('insert into orden set ?', [newOrden])
@@ -53,14 +55,15 @@ class OrdenController {
     }
     async Edit(req, res){
         const { id } = req.params
+        const orden = await pool.query('select * from orden where id_orden = ?', [id])
         
         try {
-            const { fk_paciente, derecho, izquierdo, addp, material, entrega, precio, anticipo, saldo } = req.body
+            const {derecho, izquierdo, addp, material, entrega, precio, anticipo} = req.body
             const fecha = new Date()
 
             const newOrden = {
                 fecha,
-                fk_paciente,
+                fk_paciente: orden[0].fk_paciente,
                 derecho,
                 izquierdo,
                 addp,
@@ -68,7 +71,6 @@ class OrdenController {
                 entrega,
                 precio,
                 anticipo,
-                saldo
             }
 
             await pool.query('update orden set ? where id_orden = ?', [newOrden, id])
