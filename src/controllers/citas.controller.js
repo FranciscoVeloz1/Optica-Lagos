@@ -9,14 +9,13 @@ class CitasController {
 
     async ListarAdd(req, res) {
         const cita = await pool.query('select * from cita where fk_user = ?', [req.user.id_user])
-        const citas = await pool.query('select * from cita')
-        console.log(citas)
+
         const day = getNextDay()
         if (cita.length > 0) {
             req.flash('message', 'No puedes agendar mas de una cita');
             res.redirect('/user/citas')
         } else {
-            res.render('citas/add' , { day })
+            res.render('citas/add', { day })
         }
     }
 
@@ -39,7 +38,7 @@ class CitasController {
         }
 
         if (fecha !== getCurrentDay()) {
-            // await pool.query('insert into cita set ?', [newCita])
+            await pool.query('insert into cita set ?', [newCita])
             console.log(newCita)
             req.flash('success', 'Cita agendada con exito');
             res.redirect('/user/citas')

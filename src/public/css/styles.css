@@ -7,8 +7,8 @@
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
-  /* background-color: #e6e7e9; */
   background-color: white;
+  /* background-color: rgb(249, 251, 253); */
 }
 
 .sidebar {
@@ -93,7 +93,6 @@ a[data-toggle="collapse"] {
   transition: all 0.3s;
 }
 
-
 .link-paciente {
   color: black;
 }
@@ -118,6 +117,10 @@ a[data-toggle="collapse"] {
   color: white;
 }
 
+.btn-action-oxford {
+  background-color: #e6e7e9;
+}
+
 .btn-oxford:hover {
   color: white;
 }
@@ -127,7 +130,7 @@ a[data-toggle="collapse"] {
 }
 
 #navbarDropdown {
-  background-color: #343a40;
+  background-color: #f8f9fa !important;
 }
 /* ---------------------------------------------------
     CONTENT STYLE
@@ -186,6 +189,28 @@ a[data-toggle="collapse"] {
 
 .form-control {
   height: 50px;
+}
+
+.none-border {
+  border: none;
+}
+
+.card-icon {
+  font-size: 50px;
+  color: #007bff;
+}
+
+.ok-icon {
+  color: #c3e6cb;
+  margin-right: 15px;
+}
+
+.mt-10 {
+  margin-top: 100px;
+}
+
+.citas {
+  margin-top: 100px;
 }
 
 /* ADMIN CRUD */
@@ -263,6 +288,14 @@ a[data-toggle="collapse"] {
     padding-left: 35px;
   }
 
+  .mt-sm-6 {
+    margin-top: 50px;
+  }
+
+  .citas {
+    margin-top: 50px;
+  }
+
   .btn {
     z-index: 2;
   }
@@ -270,7 +303,7 @@ a[data-toggle="collapse"] {
   .card_user_info p {
     font-size: 14px;
   }
-  
+
   .admin_crud__container {
     background-color: transparent;
     border: none;

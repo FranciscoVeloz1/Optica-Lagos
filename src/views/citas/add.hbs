@@ -2,7 +2,7 @@
 {{>message}}
 
 <div class="text-center mt-4">
-    <h1>Agendar cita</h1>
+    <h2>Agendar cita</h2>
 </div>
 
 <div class="container mt-5 mb-5">
@@ -10,22 +10,23 @@
         <div class="col-md-6 col-xl-4 mx-auto">
             <form action="/user/citas/add" method="post">
                 <div class="form-group">
+                    <p>Fecha</p>
                     <input type="date" name="fecha" id="fecha" min="{{day}}" placeholder="Fecha" class="form-control" />
                 </div>
 
                 <div class="form-group">
+                    <p>Hora</p>
                     <select name="hora" id="hora" placeholder="Hora" class="form-control">
                         <option id="opcion">10:00</option>
-                        <option id="opcion">10:40</option>
-                        <option id="opcion">11:20</option>
-                        <option id="opcion">12:00</option>
-                        <option id="opcion">12:40</option>
-                        <option id="opcion">13:20</option>
+                        <option id="opcion">10:50</option>
+                        <option id="opcion">11:30</option>
+                        <option id="opcion">12:20</option>
+                        <option id="opcion">13:00</option>
                     </select>
                 </div>
 
                 <div class="form-group mt-5">
-                    <button class="btn btn-success btn-block">
+                    <button class="btn btn-primary btn-block">
                         Agendar
                     </button>
                 </div>
