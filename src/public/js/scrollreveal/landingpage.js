@@ -69,7 +69,7 @@ sr.reveal("#info-dos", { delay: 1000 });
 //     viewfactor: 0.2
 // });
 
-sr.reveal("#contact", { delay: 1000 });
+sr.reveal("#contact", { delay: 750 });
 
 // sr.reveal('#contact', {
 //     duration: 2000,

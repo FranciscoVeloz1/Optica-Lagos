@@ -4,23 +4,62 @@
 <section class="container citas">
     <div class="row align-items-center">
         {{#each cita}}
-        <div class="col-xl-4 col-md-6 col-sm-12 mx-auto mb-5">
-            <div class="card card_container text-center">
-                <div class="card-header">
-                    <h3>{{fecha}} -- {{hora}}</h3>
-                </div>
-                <div class="card-body">
-                    <a class="btn btn-info" href="/user/citas/edit/{{id_cita}}">
-                        Reagendar
-                    </a>
 
-                    <a href="/user/citas/delete/{{id_cita}}" class="btn btn-danger"
-                        onclick="return confirm('¿Quieres cancelar tu cita?')">
-                        Cancelar
-                    </a>
-                </div>
-            </div>
+        <div id="con-cita" class="col-md-6 col-sm-12 mx-auto text-center">
+            <i class="fas fa-calendar-alt card-icon mb-3"></i>
+            <h2 class="card-title mb-3">Cita agendada para:</h2>
+            <h3 class="card-text mb-4"><span class="text-primary">{{fecha}} -- {{hora}}</span></h3>
+            <a class="btn btn-info" href="/user/citas/edit/{{id_cita}}">
+                Reagendar
+            </a>
+
+            <a href="/user/citas/delete/{{id_cita}}" class="btn btn-danger"
+                onclick="return confirm('¿Quieres cancelar tu cita?')">
+                Cancelar
+            </a>
         </div>
+
+        <section class="container mt-10 mt-sm-6 mb-5">
+            <div class="row">
+
+                <div id="fecha" class="col-lg-4 col-md-6 col-12 mx-auto mb-5">
+                    <div class="card none-border shadow-lg">
+                        <div class="card-body">
+                            <i class="fas fa-hourglass-end card-icon mb-3"></i>
+                            <h4 class="card-title mb-3">Cuando llegues...</h4>
+                            <p class="card-text mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+                                laudantium labore
+                                amet voluptate animi vero ullam. Obcaecati exercitationem sit repellat!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="hora" class="col-lg-4 col-md-6 col-12 mx-auto mb-5">
+                    <div class="card none-border shadow-lg">
+                        <div class="card-body">
+                            <i class="fas fa-briefcase-medical card-icon mb-3"></i>
+                            <h4 class="card-title mb-3">Durante la consulta...</h4>
+                            <p class="card-text mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+                                laudantium labore
+                                amet voluptate animi vero ullam. Obcaecati exercitationem sit repellat!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="espera" class="col-lg-4 col-md-6 col-12 mx-auto mb-5">
+                    <div class="card none-border shadow-lg">
+                        <div class="card-body">
+                            <i class="fas fa-glasses card-icon mb-3"></i>
+                            <h4 class="card-title mb-3">Al finalizar...</h4>
+                            <p class="card-text mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+                                laudantium labore
+                                amet voluptate animi vero ullam. Obcaecati exercitationem sit repellat!</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
 
         {{else}}
         <div id="sin-cita" class="col-md-6 col-sm-12 mx-auto text-center">
@@ -33,49 +72,49 @@
         <div id="sin-image" class="col-md-6 col-sm-12 mx-auto text-center">
             <img src="/img/len1.jpeg" style="width: 100%;">
         </div>
+
+        <section class="container mt-10 mt-sm-6 mb-5">
+            <div class="row">
+
+                <div id="fecha" class="col-lg-4 col-md-6 col-12 mx-auto mb-5">
+                    <div class="card none-border shadow-lg">
+                        <div class="card-body">
+                            <i class="fas fa-calendar-check card-icon mb-3"></i>
+                            <h4 class="card-title mb-3">Selecciona el dia que quieras para tu cita</h4>
+                            <p class="card-text mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+                                laudantium labore
+                                amet voluptate animi vero ullam. Obcaecati exercitationem sit repellat!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="hora" class="col-lg-4 col-md-6 col-12 mx-auto mb-5">
+                    <div class="card none-border shadow-lg">
+                        <div class="card-body">
+                            <i class="fas fa-clock card-icon mb-3"></i>
+                            <h4 class="card-title mb-3">Escoge a que hora quieres tu cita</h4>
+                            <p class="card-text mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+                                laudantium labore
+                                amet voluptate animi vero ullam. Obcaecati exercitationem sit repellat!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="espera" class="col-lg-4 col-md-6 col-12 mx-auto mb-5">
+                    <div class="card none-border shadow-lg">
+                        <div class="card-body">
+                            <i class="fas fa-briefcase-medical card-icon mb-3"></i>
+                            <h4 class="card-title mb-3">Espera que llegue el dia de tu cita</h4>
+                            <p class="card-text mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+                                laudantium labore
+                                amet voluptate animi vero ullam. Obcaecati exercitationem sit repellat!</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
         {{/each}}
-    </div>
-</section>
-
-<section class="container mt-10 mt-sm-6 mb-5">
-    <div class="row">
-
-        <div id="fecha" class="col-lg-4 col-md-6 col-12 mx-auto mb-5">
-            <div class="card none-border shadow-lg">
-                <div class="card-body">
-                    <i class="fas fa-calendar-check card-icon mb-3"></i>
-                    <h4 class="card-title mb-3">Selecciona el dia que quieras para tu cita</h4>
-                    <p class="card-text mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
-                        laudantium labore
-                        amet voluptate animi vero ullam. Obcaecati exercitationem sit repellat!</p>
-                </div>
-            </div>
-        </div>
-
-        <div id="hora" class="col-lg-4 col-md-6 col-12 mx-auto mb-5">
-            <div class="card none-border shadow-lg">
-                <div class="card-body">
-                    <i class="fas fa-clock card-icon mb-3"></i>
-                    <h4 class="card-title mb-3">Escoge a que hora quieres tu cita</h4>
-                    <p class="card-text mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
-                        laudantium labore
-                        amet voluptate animi vero ullam. Obcaecati exercitationem sit repellat!</p>
-                </div>
-            </div>
-        </div>
-
-        <div id="espera" class="col-lg-4 col-md-6 col-12 mx-auto mb-5">
-            <div class="card none-border shadow-lg">
-                <div class="card-body">
-                    <i class="fas fa-briefcase-medical card-icon mb-3"></i>
-                    <h4 class="card-title mb-3">Lorem ipsum dolor sit amet.</h4>
-                    <p class="card-text mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
-                        laudantium labore
-                        amet voluptate animi vero ullam. Obcaecati exercitationem sit repellat!</p>
-                </div>
-            </div>
-        </div>
-
     </div>
 </section>
 

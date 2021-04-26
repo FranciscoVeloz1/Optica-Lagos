@@ -5,7 +5,19 @@ sr.reveal('.navbar', {
     origin: 'bottom'
 });
 
+sr.reveal('.flash_container', {
+    duration: 1000,
+    origin: 'top',
+    distance: '150px'
+});
+
 sr.reveal('#sin-cita', {
+    duration: 1000,
+    origin: 'bottom',
+    distance: '300px'
+});
+
+sr.reveal('#con-cita', {
     duration: 1000,
     origin: 'bottom',
     distance: '300px'

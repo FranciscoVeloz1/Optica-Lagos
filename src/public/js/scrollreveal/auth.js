@@ -11,14 +11,14 @@ sr.reveal('.flash_container', {
     distance: '150px'
 });
 
-sr.reveal('#agendar', {
-    duration: 750,
+sr.reveal('#login', {
+    duration: 1000,
     origin: 'top',
     distance: '300px'
 });
 
-sr.reveal('#form-agendar', {
+sr.reveal('#signup', {
     duration: 1000,
-    origin: 'left',
+    origin: 'top',
     distance: '300px'
 });
