@@ -1,55 +1,80 @@
 {{>navbar}}
 {{>message}}
 
-<section class="container mt-5 mb-5">
-    <div class="row">
-
-        {{!-- {{#each cars}}
-        <div class="col-xl-4 col-md-6 col-sm-12">
+<section class="container citas">
+    <div class="row align-items-center">
+        {{#each cita}}
+        <div class="col-xl-4 col-md-6 col-sm-12 mx-auto mb-5">
             <div class="card card_container text-center">
                 <div class="card-header">
-                    {{name}}
+                    <h3>{{fecha}} -- {{hora}}</h3>
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title mb-4">
-                        {{model}}
-                    </h5>
-                    <p class="card-text mb-4">
-                        {{version}}
-                    </p>
-                    <a class="btn btn-success" href="/user/maps/{{id_auto}}">
-                        Mapa
+                    <a class="btn btn-info" href="/user/citas/edit/{{id_cita}}">
+                        Reagendar
                     </a>
 
-                    <a href="/user/cars/delete/{{id_auto}}" class="btn btn-danger"
-                        onclick="return confirm('¿Quieres eliminar el vehiculo {{name}}?')">
-                        Eliminar
-                    </a>
-
-                    <a class="btn btn-info" href="/user/cars/edit/{{id_auto}}">
-                        Editar
-                    </a>
-                </div>
-            </div>
-        </div> --}}
-
-        {{!-- {{else}} --}}
-        <div class="col-xl-4 col-md-6 col-sm-12">
-            <div class="card card_container text-center">
-                <div class="card-header">
-                    No has agendado ninguna cita
-                </div>
-                <div class="card-body mt-4">
-                    <h5 class="card-title">
-                        ¡Agenda una!
-                    </h5>
-                    <a class="btn btn-success mt-4" href="/user/citas/add">
-                        Agendar
+                    <a href="/user/citas/delete/{{id_cita}}" class="btn btn-danger"
+                        onclick="return confirm('¿Quieres cancelar tu cita?')">
+                        Cancelar
                     </a>
                 </div>
             </div>
         </div>
-        {{!-- {{/each}} --}}
+
+        {{else}}
+        <div class="col-md-6 col-sm-12 mx-auto text-center">
+            <i class="fas fa-calendar-alt card-icon mb-3"></i>
+            <h2 class="card-title mb-3">No has agendado ninguna cita</h2>
+            <h3 class="card-text mb-4">¡Agenda una!</h3>
+            <a href="/user/citas/add" class="btn btn-primary">¡Click Aqui!</a>
+        </div>
+
+        <div class="col-md-6 col-sm-12 mx-auto text-center">
+            <img src="/img/len1.jpeg" style="width: 100%;">
+        </div>
+        {{/each}}
+    </div>
+</section>
+
+<section class="container mt-10 mt-sm-6 mb-5">
+    <div class="row">
+
+        <div class="col-lg-4 col-md-6 col-12 mx-auto mb-5">
+            <div class="card none-border shadow-lg">
+                <div class="card-body">
+                    <i class="fas fa-calendar-check card-icon mb-3"></i>
+                    <h4 class="card-title mb-3">Lorem ipsum dolor sit amet.</h4>
+                    <p class="card-text mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+                        laudantium labore
+                        amet voluptate animi vero ullam. Obcaecati exercitationem sit repellat!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-12 mx-auto mb-5">
+            <div class="card none-border shadow-lg">
+                <div class="card-body">
+                    <i class="fas fa-glasses card-icon mb-3"></i>
+                    <h4 class="card-title mb-3">Lorem ipsum dolor sit amet.</h4>
+                    <p class="card-text mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+                        laudantium labore
+                        amet voluptate animi vero ullam. Obcaecati exercitationem sit repellat!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-12 mx-auto mb-5">
+            <div class="card none-border shadow-lg">
+                <div class="card-body">
+                    <i class="fas fa-briefcase-medical card-icon mb-3"></i>
+                    <h4 class="card-title mb-3">Lorem ipsum dolor sit amet.</h4>
+                    <p class="card-text mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+                        laudantium labore
+                        amet voluptate animi vero ullam. Obcaecati exercitationem sit repellat!</p>
+                </div>
+            </div>
+        </div>
 
     </div>
 </section>

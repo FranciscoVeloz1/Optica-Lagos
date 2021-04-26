@@ -7,8 +7,8 @@
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
-  /* background-color: #e6e7e9; */
   background-color: white;
+  /* background-color: rgb(249, 251, 253); */
 }
 
 .sidebar {
@@ -18,8 +18,8 @@ body {
   left: 0;
   height: 100vh;
   z-index: 999;
-  background: #efeff1;
-  color: black;
+  background: #212529;
+  color: white;
   transition: all 0.3s;
 }
 
@@ -38,16 +38,15 @@ body {
 .sidebar-header {
   padding: 20px 0px;
   text-align: center;
-  background: #efeff1;
+  background: #343a40;
 }
 
 #sidebar ul.components {
   padding: 20px 0;
-  border-bottom: 1px solid #efeff1;
 }
 
 #sidebar ul p {
-  color: #f2f2f2;
+  color: white;
   padding: 10px;
 }
 
@@ -58,14 +57,14 @@ body {
 }
 
 #sidebar ul li a:hover {
-  color: black;
-  background: white;
+  color: white;
+  background: #343a40;
 }
 
 #sidebar ul li.active > a,
 a[aria-expanded="true"] {
-  color: black;
-  background: white;
+  color: white;
+  background: #343a40;
 }
 
 a[data-toggle="collapse"] {
@@ -83,13 +82,13 @@ a[data-toggle="collapse"] {
 .side_ul ul a {
   font-size: 0.9em !important;
   padding-left: 30px !important;
-  background: #efeff1;
+  background: #212529;
 }
 
 .link,
 .link:hover,
 .link:focus {
-  color: inherit;
+  color: white;
   text-decoration: none;
   transition: all 0.3s;
 }
@@ -114,8 +113,12 @@ a[data-toggle="collapse"] {
 }
 
 .btn-oxford {
-  background-color: #00949c;
+  background-color: #343a40;
   color: white;
+}
+
+.btn-action-oxford {
+  background-color: #e6e7e9;
 }
 
 .btn-oxford:hover {
@@ -127,7 +130,7 @@ a[data-toggle="collapse"] {
 }
 
 #navbarDropdown {
-  background-color: #343a40;
+  background-color: #f8f9fa !important;
 }
 /* ---------------------------------------------------
     CONTENT STYLE
@@ -188,6 +191,28 @@ a[data-toggle="collapse"] {
   height: 50px;
 }
 
+.none-border {
+  border: none;
+}
+
+.card-icon {
+  font-size: 50px;
+  color: #007bff;
+}
+
+.ok-icon {
+  color: #c3e6cb;
+  margin-right: 15px;
+}
+
+.mt-10 {
+  margin-top: 100px;
+}
+
+.citas {
+  margin-top: 100px;
+}
+
 /* ADMIN CRUD */
 .button-oxford {
   background-color: #00949c;
@@ -238,6 +263,11 @@ a[data-toggle="collapse"] {
     padding: 10px;
   }
 
+  #sidebarCollapse {
+    filter: none;
+    z-index: 10;
+  }
+
   #content {
     width: 100%;
     padding: 5px 10px;
@@ -255,7 +285,15 @@ a[data-toggle="collapse"] {
   }
 
   .sidebar-header {
-    margin-left: 35px;
+    padding-left: 35px;
+  }
+
+  .mt-sm-6 {
+    margin-top: 50px;
+  }
+
+  .citas {
+    margin-top: 50px;
   }
 
   .btn {
@@ -265,7 +303,7 @@ a[data-toggle="collapse"] {
   .card_user_info p {
     font-size: 14px;
   }
-  
+
   .admin_crud__container {
     background-color: transparent;
     border: none;

@@ -6,7 +6,7 @@
 
     <div class="container menu_info mt-5">
         <div class="row">
-            <div class="col-md-8 col-xl-4 mx-auto">
+            <div class="col-md-10 col-xl-8 mx-auto">
                 <div class="card text-center">
                     <div class="card-header">
                         <h3>Editar orden</h3>
@@ -14,36 +14,49 @@
 
                     <div class="card-body">
                         <form action="/admin/orden/edit/{{orden.id_orden}}" method="POST">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" name="derecho" value="{{orden.derecho}}"
+                                            placeholder="Derecho" class="form-control" />
+                                    </div>
 
-                            <div class="form-group">
-                                <input type="text" name="derecho" value="{{orden.derecho}}"  placeholder="Derecho" class="form-control" />
+                                    <div class="form-group">
+                                        <input type="text" name="izquierdo" value="{{orden.izquierdo}}"
+                                            placeholder="Izquierdo" class="form-control" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="addp" value="{{orden.addp}}" placeholder="Adicion"
+                                            class="form-control" />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="text" name="material" value="{{orden.material}}"
+                                            placeholder="Material" class="form-control" />
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="form-group text-left">
+                                        <h5 style="color: #767f86;">Fecha de entrega</h5>
+                                        <input type="date" name="entrega" value="{{orden.entrega}}"
+                                            placeholder="Entrega" class="form-control" />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="text" name="precio" value="{{orden.precio}}" placeholder="Precio"
+                                            class="form-control" />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="text" name="anticipo" value="{{orden.anticipo}}"
+                                            placeholder="Anticipo" class="form-control" />
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="form-group">
-                                <input type="text" name="izquierdo" value="{{orden.izquierdo}}" placeholder="Izquierdo" class="form-control" />
-                            </div>
-                            <div class="form-group">
-                                <input type="text" name="addp" value="{{orden.addp}}" placeholder="Adicion" class="form-control" />
-                            </div>
-
-                            <div class="form-group">
-                                <input type="text" name="material" value="{{orden.material}}" placeholder="Material" class="form-control" />
-                            </div>
-
-                            <div class="form-group">
-                                <input type="date" name="entrega" value="{{orden.entrega}}" placeholder="Entrega" class="form-control" />
-                            </div>
-
-                            <div class="form-group">
-                                <input type="text" name="precio" value="{{orden.precio}}" placeholder="Precio" class="form-control" />
-                            </div>
-
-                            <div class="form-group">
-                                <input type="text" name="anticipo" value="{{orden.anticipo}}" placeholder="Anticipo" class="form-control" />
-                            </div>
-
-                            <div class="form-group">
-                                <button class="btn btn-oxford btn-block">
+                                <button class="btn btn-primary btn-block">
                                     Editar
                                 </button>
                             </div>

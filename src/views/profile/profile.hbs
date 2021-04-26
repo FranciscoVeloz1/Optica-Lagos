@@ -3,7 +3,7 @@
 
 <div class="container">
 
-    <h1 class="mt-4 text-center">Mis datos</h1>
+    <h2 class="mt-4 text-center">Mis datos</h2>
 
     <section class="user_info">
         <h4 class="mb-3">Datos personales</h4>
@@ -16,7 +16,7 @@
         </div>
     </section>
 
-    <section class="user_info">
+    <section class="user_info mb-5">
         <h4 class="mb-3">Datos de cuenta</h4>
         <div class="card card_user_info">
             <p class="p_category">Usuario</p>
@@ -27,6 +27,11 @@
             <p class="p_category">Email</p>
             <p>{{user.email}}</p>
             <a href="/profile/edit/email"><i class="fas fa-angle-right"></i></a>
+        </div>
+        <div class="card card_user_info mt-3">
+            <p class="p_category">Contraseña</p>
+            <p>****************</p>
+            <a href="/profile/edit/pass"><i class="fas fa-angle-right"></i></a>
         </div>
     </section>
 
