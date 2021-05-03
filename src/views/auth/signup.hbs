@@ -1,40 +1,55 @@
 {{>navbar}}
 {{>message}}
 
-<div id="signup" class="container mt-5">
+<div id="signup" class="container mt-4 mb-5">
     <div class="row">
-        <div class="col-md-5 col-xl-4 mx-auto">
-            <div class="card text-center">
-                <div class="card-header">
-                    <h3>Registrate</h3>
-                </div>
+        <div class="col-lg-5 col-md-6 col-12 mx-auto">
+            <div class="card login pt-5 pb-5">
                 <div class="card-body">
+                    <div class="card-title text-center mb-5">
+                        <h2>Registrate</h2>
+                    </div>
                     <form action="/signup" method="POST">
 
-                        <div class="form-group">
-                            <input type="type" name="user" placeholder="Usuario" class="form-control" required>
+                        <div class="row">
+                            <div class="form-group col-lg-6">
+                                <input type="text" name="user" placeholder="Usuario" class="form-control" required>
+                            </div>
+
+                            <div class="form-group col-lg-6">
+                                <input type="text" name="fullname" placeholder="Nombre completo" class="form-control"
+                                    required>
+                            </div>
                         </div>
 
                         <div class="form-group">
-                            <input type="type" name="fullname" placeholder="Nombre completo" class="form-control" required>
+                            <input type="email" name="email" placeholder="Email" class="form-control" required>
                         </div>
 
                         <div class="form-group">
-                            <input type="type" name="email" placeholder="Email" class="form-control" required>
+                            <input type="password" name="password" placeholder="Contraseña" class="form-control"
+                                required>
                         </div>
 
                         <div class="form-group">
-                            <input type="password" name="password" placeholder="Contraseña" class="form-control" required>
+                            <input type="password" name="passwords" placeholder="Contraseña" class="form-control"
+                                required>
                         </div>
 
-                        <div class="form-group">
-                            <input type="password" name="passwords" placeholder="Contraseña" class="form-control" required>
+                        <div class="form-group remember pt-3">
+                            <p class="p-terms">Al hacer clic en Registrarse, acepto que he leído y aceptado los <a
+                                    href="#">Términos de uso y la Política de privacidad</a></p>
                         </div>
 
                         <div class="form-group">
                             <button class="btn btn-primary btn-block">
-                                Registrate
+                                Registrarse
                             </button>
+                        </div>
+
+                        <div class="form-group login-register pt-4">
+                            <p>¿Ya tienes una cuenta?</p>
+                            <a href="/login">Inicia sesión</a>
                         </div>
                     </form>
                 </div>
@@ -43,4 +58,6 @@
     </div>
 </div>
 
-<script src="/js/scrollreveal/auth.js"></script>
+{{>footer}}
+{{!--
+<script src="/js/scrollreveal/auth.js"></script> --}}

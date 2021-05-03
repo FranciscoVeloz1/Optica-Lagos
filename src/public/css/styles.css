@@ -136,6 +136,35 @@ a[data-toggle="collapse"] {
     CONTENT STYLE
 ----------------------------------------------------- */
 
+/* LOGIN */
+.login {
+  border: solid black 1px;
+  border-radius: 40px;
+  padding: 0px 10px;
+}
+
+.remember {
+  font-size: 14px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.login-register {
+  display: flex;
+  justify-content: space-around;
+  font-size: 14px;
+}
+
+.login-register a {
+  font-weight: bold;
+  color: black;
+}
+
+.p-terms {
+  font-size: 13px;
+}
+/* /LOGIN */
+
 /* PROFILE */
 .user_info {
   margin-top: 30px;
@@ -257,6 +286,11 @@ a[data-toggle="collapse"] {
   margin-top: 50px;
 }
 
+#footer {
+  font-size: 14px;
+  height: 100px;
+}
+
 /* MEDIA QUERIES 500px*/
 @media (max-width: 500px) {
   .navbar {
@@ -290,6 +324,11 @@ a[data-toggle="collapse"] {
 
   .mt-sm-6 {
     margin-top: 50px;
+  }
+
+  .login {
+    border: none;
+    padding: 0px;
   }
 
   .citas {
