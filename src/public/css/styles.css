@@ -291,8 +291,16 @@ a[data-toggle="collapse"] {
   height: 100px;
 }
 
+@media (max-width: 1400px) {
+  #footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+  }
+}
+
 /* MEDIA QUERIES 500px*/
-@media (max-width: 500px) {
+@media (max-width: 580px) {
   .navbar {
     padding: 10px;
   }
@@ -352,5 +360,9 @@ a[data-toggle="collapse"] {
 
   .admin_crud__container--form {
     width: 80%;
+  }
+
+  #footer {
+    position: relative;
   }
 }
