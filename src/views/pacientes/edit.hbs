@@ -1,75 +1,3 @@
-{{!-- {{>sidebar}}
-
-<div id="content">
-    {{>navigation}}
-    {{>message}}
-
-    <div class="container menu_info mt-5">
-        <div class="row">
-            <div class="col-md-10 col-xl-8 mx-auto">
-                <div class="card text-center">
-                    <div class="card-header">
-                        <h3>Editar paciente</h3>
-                    </div>
-
-                    <div class="card-body">
-                        <form action="/admin/pacientes/edit/{{paciente.id_paciente}}" method="POST">
-                            <div class="row">
-                                <div class="col-lg-6 col-md-12">
-                                    <div class="form-group">
-                                        <input type="text" name="nombre" value="{{paciente.nombre}}"
-                                            placeholder="Nombre" class="form-control" />
-                                    </div>
-
-                                    <div class="form-group">
-                                        <input type="text" name="apellidop" value="{{paciente.apellidop}}"
-                                            placeholder="Apellido paterno" class="form-control" />
-                                    </div>
-
-                                    <div class="form-group">
-                                        <input type="text" name="apellidom" value="{{paciente.apellidom}}"
-                                            placeholder="Apellido materno" class="form-control" />
-                                    </div>
-
-                                    <div class="form-group">
-                                        <input type="text" name="edad" value="{{paciente.edad}}" placeholder="Edad"
-                                            class="form-control" />
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6 col-md-12">
-                                    <div class="form-group">
-                                        <input type="text" name="direccion" value="{{paciente.direccion}}"
-                                            placeholder="Direccion" class="form-control" />
-                                    </div>
-
-                                    <div class="form-group">
-                                        <input type="text" name="colonia" value="{{paciente.colonia}}"
-                                            placeholder="Colonia" class="form-control" />
-                                    </div>
-
-                                    <div class="form-group">
-                                        <input type="text" name="telefono" value="{{paciente.telefono}}"
-                                            placeholder="Telefono" class="form-control" />
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <button class="btn btn-primary btn-block">
-                                    Editar
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script src="/js/index.js"></script> --}}
-
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
     <a class="navbar-brand" href="/admin">Óptica Lagos</a>
     <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i
@@ -101,7 +29,7 @@
     {{>sidebar}}
     <div id="layoutSidenav_content">
         {{>message}}
-        <div class="container menu_info mt-5">
+        <div class="container menu_info mt-5 mb-5">
             <div class="row">
                 <div class="col-md-10 col-xl-8 mx-auto">
                     <div class="card text-center">
@@ -115,47 +43,47 @@
                                     <div class="col-lg-6 col-md-12">
                                         <div class="form-group">
                                             <input type="text" name="nombre" value="{{paciente.nombre}}"
-                                                placeholder="Nombre" class="form-control" />
+                                                placeholder="Nombre" class="form-control" required />
                                         </div>
 
                                         <div class="form-group">
                                             <input type="text" name="apellidop" value="{{paciente.apellidop}}"
-                                                placeholder="Apellido paterno" class="form-control" />
+                                                placeholder="Apellido paterno" class="form-control" required />
                                         </div>
 
                                         <div class="form-group">
                                             <input type="text" name="apellidom" value="{{paciente.apellidom}}"
-                                                placeholder="Apellido materno" class="form-control" />
+                                                placeholder="Apellido materno" class="form-control" required />
                                         </div>
 
                                         <div class="form-group">
                                             <input type="text" name="edad" value="{{paciente.edad}}" placeholder="Edad"
-                                                class="form-control" />
+                                                class="form-control" required />
                                         </div>
                                     </div>
 
                                     <div class="col-lg-6 col-md-12">
                                         <div class="form-group">
                                             <input type="text" name="direccion" value="{{paciente.direccion}}"
-                                                placeholder="Direccion" class="form-control" />
+                                                placeholder="Direccion" class="form-control" required />
                                         </div>
 
                                         <div class="form-group">
                                             <input type="text" name="colonia" value="{{paciente.colonia}}"
-                                                placeholder="Colonia" class="form-control" />
+                                                placeholder="Colonia" class="form-control" required />
                                         </div>
 
                                         <div class="form-group">
                                             <input type="text" name="telefono" value="{{paciente.telefono}}"
-                                                placeholder="Telefono" class="form-control" />
+                                                placeholder="Telefono" class="form-control" required />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <button class="btn btn-form btn-primary btn-block">
+                                                Editar
+                                            </button>
                                         </div>
                                     </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <button class="btn btn-primary btn-block">
-                                        Editar
-                                    </button>
                                 </div>
                             </form>
                         </div>
@@ -163,7 +91,6 @@
                 </div>
             </div>
         </div>
-
         {{>admin_footer}}
     </div>
 </div>

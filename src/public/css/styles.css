@@ -96,6 +96,10 @@ body {
   height: 50px;
 }
 
+.btn-form {
+  height: 50px;
+}
+
 .link-paciente {
   color: black;
 }
