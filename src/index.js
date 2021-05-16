@@ -67,6 +67,8 @@ app.use(require('./routes/admin.paciente.route'));
 app.use(require('./routes/admin.antecedente.route'));
 app.use(require('./routes/admin.orden.route'));
 
+app.use(require('./routes/404'));
+
 //Starting
 app.listen(app.get('port'), () => {
     console.log('Server on port', app.get('port'))
