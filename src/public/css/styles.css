@@ -162,9 +162,21 @@ body {
   margin-top: 50px;
 }
 
-#footer {
-  font-size: 14px;
+/* Footer */
+.pie_de_pagina {
+  display: flex;
+  align-items: center;
   height: 100px;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.pie_de_pagina a {
+  color: black;
+  cursor: pointer;
+  font-size: 14px;
+  padding-left: 30px;
+  text-decoration: none;
 }
 
 /* MEDIA QUERIES 500px*/
@@ -203,5 +215,11 @@ body {
 
   .admin_crud__container--form {
     width: 80%;
+  }
+
+  .pie_de_pagina {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 20px;
   }
 }
