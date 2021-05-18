@@ -56,6 +56,13 @@ body {
 }
 /* /LOGIN */
 
+/* LANDING PAGE */
+#header, #info-one {
+  margin: 110px 0px;
+}
+
+/* /LANDING PAGE */
+
 /* PROFILE */
 .user_info {
   margin-top: 30px;
