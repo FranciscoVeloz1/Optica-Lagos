@@ -57,7 +57,8 @@ body {
 /* /LOGIN */
 
 /* LANDING PAGE */
-#header, #info-one {
+#header,
+#info-one {
   margin: 110px 0px;
 }
 
@@ -190,6 +191,11 @@ body {
 @media (max-width: 580px) {
   .navbar {
     padding: 10px;
+  }
+
+  #header,
+  #info-one {
+    margin: 30px 0px;
   }
 
   .mt-sm-6 {
