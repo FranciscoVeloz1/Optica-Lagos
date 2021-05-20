@@ -54,5 +54,17 @@ const getCitas = async input => {
         }
     }
 
+    // if (h.length == 0) {
+    //     let newH = ['10:00', '10:50', '11:30', '12:20', '13:00']
+    //     for (const hour of newH) {
+    //         res += `<option>${hour}</option>`
+    //     }
+    // } else {
+    //     for (let i = 0; i < h.length; i++) {
+    //         const hora = h[i];
+    //         res += `<option>${hora}</option>`
+    //     }
+    // }
+
     return res
 }

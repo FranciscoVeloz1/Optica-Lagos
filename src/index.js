@@ -66,6 +66,7 @@ app.use(require('./routes/admin.user.route'));
 app.use(require('./routes/admin.paciente.route'));
 app.use(require('./routes/admin.antecedente.route'));
 app.use(require('./routes/admin.orden.route'));
+app.use(require('./routes/admin.agenda.route'));
 
 app.use(require('./routes/404'));
 

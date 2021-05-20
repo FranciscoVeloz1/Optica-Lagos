@@ -6,7 +6,7 @@
     <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
         <div class="input-group">
             <input class="form-control" type="text" placeholder="Buscar" aria-label="Search"
-                aria-describedby="basic-addon2" disabled />
+                aria-describedby="basic-addon2" />
             <div class="input-group-append">
                 <button class="btn btn-primary" type="button"><i class="fas fa-search"></i></button>
             </div>
@@ -27,16 +27,15 @@
 
 <div id="layoutSidenav">
     {{>sidebar}}
-
     <div id="layoutSidenav_content">
         {{>message}}
         <div class="container-fluid">
-            <h2 class="mt-4 mb-3">Usuarios</h2>
+            <h2 class="mt-4 mb-3">Citas</h2>
             <div class="breadcrumb mb-4 row justify-content-between aling-items-center">
-                <div class="breadcrumb-item ">Lista de usuarios</div>
+                <div class="breadcrumb-item ">Lista de citas</div>
 
                 <div class="">
-                    <button type="button" id="user_excel" class="btn btn-primary btn-sm">
+                    <button type="button" id="cita_excel" class="btn btn-primary btn-sm">
                         <i class="fas fa-file-excel"></i>
                     </button>
 
@@ -54,33 +53,26 @@
                         <tr>
                             <th class="text-left">ID</th>
                             <th>Usuario</th>
-                            <th>Nombre</th>
-                            <th>Email</th>
-                            <th>Rol</th>
+                            <th>Correo</th>
+                            <th>Fecha</th>
+                            <th>Hora</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {{#each usuario}}
+                        {{#each citas}}
                         <tr>
-                            <td class="text-left">{{id_user}}</td>
-                            <td>{{user}}</td>
+                            <td class="text-left">{{id_cita}}</td>
                             <td>{{fullname}}</td>
                             <td>{{email}}</td>
-                            <td>{{role}}</td>
+                            <td>{{fecha}}</td>
+                            <td>{{hora}}</td>
                             <td>
                                 <!--BOTÓN ACCIONES-->
                                 <div class="btn-group dropleft">
                                     <div>
-                                        <a href="/admin/users/edit/{{id_user}}"
-                                            class="btn btn-size-right btn-info ml-1">
-                                            Editar
-                                        </a>
-                                    </div>
-
-                                    <div>
-                                        <a href="/admin/users/delete/{{id_user}}"
-                                            onclick="return confirm('¿Quieres eliminar a {{user}}?')"
+                                        <a href="/admin/citas/delete/{{id_cita}}"
+                                            onclick="return confirm('¿Quieres eliminar la cita de {{fullname}}?')"
                                             class="btn btn-size-right btn-danger ml-1" id="btn-delete">
                                             Eliminar
                                         </a>
@@ -94,11 +86,9 @@
                 </table>
             </div>
         </div>
-
         {{>admin_footer}}
     </div>
 </div>
 
-
-{{!-- own scripts --}}
 <script type="module" src="/js/index.js"></script>
+<script type="module" src="/js/excel.js"></script>
