@@ -1,8 +1,10 @@
 const fecha = document.getElementById('fecha')
 const hora = document.getElementById('hora')
 
-// const API = 'http://localhost:5000'
-const API = 'https://optica-lagos.herokuapp.com'
+const API = 'http://localhost:5000'
+// const API = 'https://optica-lagos.herokuapp.com'
+
+
 const API_CITAS = `${API}/api/citas`
 
 fecha.addEventListener('change', async () => {

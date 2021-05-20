@@ -2,8 +2,9 @@ import ExcelController from './controllers/excel.controller.js'
 const ex = new ExcelController()
 
 //APIS
-// const API = 'http://localhost:5000'
-const API = 'https://optica-lagos.herokuapp.com'
+const API = 'http://localhost:5000'
+// const API = 'https://optica-lagos.herokuapp.com'
+
 const API_PACIENTE = `${API}/api/admin/pacientes`
 const API_ADMIN = `${API}/api/admin/admins`
 const API_SUPER = `${API}/api/admin/supervisor`
