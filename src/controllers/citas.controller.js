@@ -9,8 +9,8 @@ class CitasController {
 
     async ListarAdd(req, res) {
         const cita = await pool.query('select * from cita where fk_user = ?', [req.user.id_user])
-
         const day = getNextDay()
+        
         if (cita.length > 0) {
             req.flash('message', 'No puedes agendar mas de una cita');
             res.redirect('/user/citas')
@@ -65,7 +65,16 @@ class CitasController {
             req.flash('message', 'Esta cita no existe');
             res.redirect('/user/citas')
         }
+    }
 
+    //API
+    async ListAPI(req, res) {
+        const cita = await pool.query('select * from cita')
+        try {
+            res.json(cita).status(202)
+        } catch (error) {
+            console.log(error)
+        }
     }
 }
 

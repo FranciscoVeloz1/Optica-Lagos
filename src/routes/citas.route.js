@@ -8,4 +8,7 @@ router.get('/user/citas/add', isLoggedIn, controller.ListarAdd)
 router.post('/user/citas/add', isLoggedIn, controller.AgendarCita)
 router.get('/user/citas/delete/:id', isLoggedIn, controller.DeleteCita)
 
+//API
+router.get('/api/citas', isLoggedIn, controller.ListAPI)
+
 module.exports = router
