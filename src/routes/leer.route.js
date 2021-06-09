@@ -1,8 +1,7 @@
 const { Router } = require('express')
 const router = Router()
-const controller = require('../controllers/index.controller')
-const { isLoggedIn} = require('../lib/auth');
+const controller = require('../controllers/leer.controller')
 
-router.get('/leer',isLoggedIn,controller.Mostrar)
+router.get('/leer',controller.Mostrar)
 
 module.exports = router

@@ -57,6 +57,8 @@ app.use(require('./routes/index.route'));
 app.use(require('./routes/auth.route'));
 app.use(require('./routes/profile.route'));
 app.use(require('./routes/citas.route'));
+app.use(require('./routes/leer.route'));
+app.use(require('./routes/leerinformacion.route'));
 
 //Admin routes
 app.use(require('./routes/admin.dash.route'));

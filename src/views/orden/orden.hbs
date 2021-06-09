@@ -34,14 +34,9 @@
             <h2 class="mt-4 mb-3">Ordenes de trabajo</h2>
             <div class="breadcrumb mb-4 row justify-content-between aling-items-center">
                 <div class="breadcrumb-item ">Lista de ordenes</div>
-
                 <div class="">
                     <button type="button" id="orden_excel" class="btn btn-primary btn-sm">
                         <i class="fas fa-file-excel"></i>
-                    </button>
-
-                    <button type="button" class="btn btn-primary btn-sm">
-                        <i class="fas fa-file-pdf"></i>
                     </button>
                 </div>
             </div>
@@ -91,7 +86,7 @@
 
                                     <div>
                                         <a href="/admin/orden/delete/{{id_orden}}"
-                                            onclick="return confirm('¿Quieres eliminar a {{fk_paciente}}?')"
+                                            onclick="return confirm('¿Quieres eliminar la orden de {{nombre}}?')"
                                             class="btn btn-size-right btn-danger ml-1" id="btn-delete">
                                             Eliminar
                                         </a>
