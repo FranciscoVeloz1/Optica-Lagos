@@ -8,10 +8,10 @@
         <div id="con-cita" class="col-md-6 col-sm-12 mx-auto text-center">
             <i class="fas fa-calendar-alt card-icon mb-3"></i>
             <h2 class="card-title mb-3">Cita agendada para:</h2>
-            <h3 class="card-text mb-4"><span class="text-primary">{{fecha}} -- {{hora}}</span></h3>
-            <a class="btn btn-info" href="/user/citas/edit/{{id_cita}}">
+            <h3 class="card-text mb-4"><span class="text-primary">{{fecha}} | {{hora}}</span></h3>
+            {{!-- <a class="btn btn-info" href="/user/citas/edit/{{id_cita}}">
                 Reagendar
-            </a>
+            </a> --}}
 
             <a href="/user/citas/delete/{{id_cita}}" class="btn btn-danger"
                 onclick="return confirm('¿Quieres cancelar tu cita?')">
@@ -27,9 +27,9 @@
                         <div class="card-body">
                             <i class="fas fa-hourglass-end card-icon mb-3"></i>
                             <h4 class="card-title mb-3">Cuando llegues...</h4>
-                            <p class="card-text mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
-                                laudantium labore
-                                amet voluptate animi vero ullam. Obcaecati exercitationem sit repellat!</p>
+                            <p class="card-text mb-4">El optometrista registrará tus datos personales y tus antecedentes
+                                médicos, con la intención de conocer tu estado actual de salud, para poder adaptarte
+                                mejores lentes.</p>
                         </div>
                     </div>
                 </div>
@@ -39,9 +39,9 @@
                         <div class="card-body">
                             <i class="fas fa-briefcase-medical card-icon mb-3"></i>
                             <h4 class="card-title mb-3">Durante la consulta...</h4>
-                            <p class="card-text mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
-                                laudantium labore
-                                amet voluptate animi vero ullam. Obcaecati exercitationem sit repellat!</p>
+                            <p class="card-text mb-4">Se te harán pruebas con un tipo de lentes especial, donde se irá
+                                ajustando tu graduación en base a las preguntas y exámenes que realizará el
+                                optometrista.</p>
                         </div>
                     </div>
                 </div>
@@ -51,9 +51,9 @@
                         <div class="card-body">
                             <i class="fas fa-glasses card-icon mb-3"></i>
                             <h4 class="card-title mb-3">Al finalizar...</h4>
-                            <p class="card-text mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
-                                laudantium labore
-                                amet voluptate animi vero ullam. Obcaecati exercitationem sit repellat!</p>
+                            <p class="card-text mb-4">Podrás escoger los lentes que gustes, después se te generará una
+                                orden de pago donde se te dará el costo total de la cita y los lentes. Y al final se te
+                                dará la fecha de entrega.</p>
                         </div>
                     </div>
                 </div>
@@ -81,9 +81,8 @@
                         <div class="card-body">
                             <i class="fas fa-calendar-check card-icon mb-3"></i>
                             <h4 class="card-title mb-3">Selecciona el dia que quieras para tu cita</h4>
-                            <p class="card-text mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
-                                laudantium labore
-                                amet voluptate animi vero ullam. Obcaecati exercitationem sit repellat!</p>
+                            <p class="card-text mb-4">Cuando vayas a registrar tu cita, aparecerá una opción donde
+                                podrás seleccionar el día que gustes, a partir del día siguiente a hoy.</p>
                         </div>
                     </div>
                 </div>
@@ -92,10 +91,9 @@
                     <div class="card none-border shadow-lg">
                         <div class="card-body">
                             <i class="fas fa-clock card-icon mb-3"></i>
-                            <h4 class="card-title mb-3">Escoge a que hora quieres tu cita</h4>
-                            <p class="card-text mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
-                                laudantium labore
-                                amet voluptate animi vero ullam. Obcaecati exercitationem sit repellat!</p>
+                            <h4 class="card-title mb-3">Escoge a qué hora quieres tu cita</h4>
+                            <p class="card-text mb-4">Existen varios horarios seleccionables para tu cita. Si alguien
+                                más ya reservó algún horario, solo podrás visualizar los que están disponibles.</p>
                         </div>
                     </div>
                 </div>
@@ -105,9 +103,8 @@
                         <div class="card-body">
                             <i class="fas fa-briefcase-medical card-icon mb-3"></i>
                             <h4 class="card-title mb-3">Espera que llegue el dia de tu cita</h4>
-                            <p class="card-text mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
-                                laudantium labore
-                                amet voluptate animi vero ullam. Obcaecati exercitationem sit repellat!</p>
+                            <p class="card-text mb-4">Ahora solo queda esperar. En la aplicación se te marcará la fecha
+                                y horario que seleccionaste, junto con algunas recomendaciones.</p>
                         </div>
                     </div>
                 </div>

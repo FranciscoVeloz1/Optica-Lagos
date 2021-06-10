@@ -40,7 +40,7 @@ class CitasController {
         if (fecha !== getCurrentDay()) {
             await pool.query('insert into cita set ?', [newCita])
             console.log(newCita)
-            req.flash('success', 'Cita agendada con exito');
+            req.flash('success', 'Cita agendada con éxito');
             res.redirect('/user/citas')
         } else {
             req.flash('message', 'No se puede agendar el dia de hoy');
@@ -62,7 +62,7 @@ class CitasController {
                 res.redirect('/user/citas')
             }
         } catch (error) {
-            req.flash('message', 'Esta cita no existe');
+            req.flash('message', 'Esta cita no éxiste');
             res.redirect('/user/citas')
         }
     }

@@ -40,7 +40,7 @@ sr.reveal('.parrafodos', {
 
 sr.reveal('.showcase', {
     duration: 2000,
-    origin: "left",
+    origin: "top",
     distance: "300px",
     delay: 200
 });
@@ -52,31 +52,59 @@ sr.reveal('.texto', {
     delay: 200
 });
 
-sr.reveal('.text', {
+sr.reveal('#maps', {
+    duration: 2000,
+    origin: "left",
+    distance: "300px",
+    delay: 200
+});
+
+sr.reveal('#text', {
     duration: 2000,
     origin: "right",
-    distance: "300px",
+    distance: "100px",
     delay: 200
 });
 
 sr.reveal('.showcases', {
     duration: 2000,
     origin: "left",
-    distance: "300px",
+    distance: "150px",
     delay: 200
 });
 
 sr.reveal('.texto', {
     duration: 2000,
     origin: "top",
-    distance: "300px",
+    distance: "100px",
+    delay: 200
+});
+
+sr.reveal('#card1', {
+    duration: 2000,
+    origin: "bottom",
+    distance: "100px",
+    delay: 200
+});
+
+sr.reveal('#card2', {
+    duration: 2500,
+    origin: "bottom",
+    distance: "100px",
+    delay: 200
+});
+
+sr.reveal('#card3', {
+    duration: 3000,
+    origin: "bottom",
+    distance: "100px",
     delay: 200
 });
 
 sr.reveal('.texts', {
-    duration: 2000,
-    origin: "right",
-    distance: "300px",
+    duration: 3000,
+    origin: "top",
+    distance: "50px",
     delay: 200
 });
 
