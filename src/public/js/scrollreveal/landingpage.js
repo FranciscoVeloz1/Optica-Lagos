@@ -38,6 +38,47 @@ sr.reveal('.parrafodos', {
     delay: 200
 });
 
+sr.reveal('.showcase', {
+    duration: 2000,
+    origin: "left",
+    distance: "300px",
+    delay: 200
+});
+
+sr.reveal('.texto', {
+    duration: 2000,
+    origin: "top",
+    distance: "300px",
+    delay: 200
+});
+
+sr.reveal('.text', {
+    duration: 2000,
+    origin: "right",
+    distance: "300px",
+    delay: 200
+});
+
+sr.reveal('.showcases', {
+    duration: 2000,
+    origin: "left",
+    distance: "300px",
+    delay: 200
+});
+
+sr.reveal('.texto', {
+    duration: 2000,
+    origin: "top",
+    distance: "300px",
+    delay: 200
+});
+
+sr.reveal('.texts', {
+    duration: 2000,
+    origin: "right",
+    distance: "300px",
+    delay: 200
+});
 
 sr.reveal("#info-dos", { delay: 1000 });
 
